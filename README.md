@@ -21,7 +21,7 @@ To write a program to prepare EMI calculator using function without return type 
 #include <math.h>
 void calculateEMI(float principal, float rate, int time) {
     float monthlyRate, emi;
-    monthlyRate = rate / (12 * 100); // Converting annual rate to monthly decimal rate
+    monthlyRate = rate / (12 * 100); 
     emi = (principal * monthlyRate * pow(1 + monthlyRate, time)) / (pow(1 + monthlyRate, time) - 1);
     printf("The EMI is: %.2f\n", emi);
 }
@@ -105,7 +105,7 @@ To write a C program to read n elements as input and print the last element of t
 int main() {
     int n;
     scanf("%d", &n);
-    int arr[n]; // Array of size n
+    int arr[n]; 
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
@@ -193,13 +193,13 @@ int main() {
     }
     for (int i = 0; i < n; i++) {
         if (arr[i] % 2 == 0) {
-            arr[i] = 'E';  // Replacing even numbers with 'E'
+            arr[i] = 'E';  
         }
     }
     printf("Array after replacing even elements with 'E':\n");
     for (int i = 0; i < n; i++) {
         if (arr[i] == 'E') {
-            printf("E "); // Display 'E' for replaced even elements
+            printf("E ");
         } else {
             printf("%d ", arr[i]);
         }
